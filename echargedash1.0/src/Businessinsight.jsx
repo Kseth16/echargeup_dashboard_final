@@ -704,7 +704,7 @@ data={(businessarr!==null)?(businessarr[0]["totalsocialsites"]):(null)}
       {...size}
     />  
 
-<div className=" flex flex-col mt-12" style={{position:'absolute', left:'30%', bottom:'30%'}}  >
+<div className=" flex flex-col mt-12" style={{position:'absolute', left:'30%', bottom:'30%', marginLeft:'10px'}}  >
 
 {/* <div className="bg-slate-100 flex flex-col  mt-4" style={{position:'absolute', right:'230px', width:'100%', fontSize:'14px', whiteSpace: 'nowrap', overflowX: 'auto'}} >  */}
 
@@ -1540,7 +1540,7 @@ data={(businessarr!==null)?(businessarr[0]["totalsocialsites"]):(null)}
 {(businessarr !== null && businessarr[0]?.networksusedresult !== null) ? (
 
 
-<div style={{position:"absolute",left:"100px"}} className="flex flex-row justify-between">
+<div style={{position:"absolute",left:"120px", marginLeft:'20px'}} className="flex flex-row justify-between">
  
 
 
