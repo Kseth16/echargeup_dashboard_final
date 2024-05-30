@@ -1137,14 +1137,14 @@ data={(businessarr!==null)?(businessarr[0]["totalsocialsites"]):(null)}
           <p className="text-tremor-default text-tremor-content dark:text-dark-tremor-content flex items-center justify-around">
           {/* <span style={{fontWeight:"bold"}}>{businessarr[0].riskamount.find(item => item.GroupName === "Low risk")?.Count || 0}</span> */}
           {/* <span style={{fontWeight:"bold"}}>{tempholdingarr["Risk_Model.alternateRiskScore"]<333?({tempholdingarr["Risk_Model.alternateRiskScore"]}):(null)} </span> */}
-          {tempholdingarr["Risk_Model.alternateRiskScore"]<333 ? (<span style={{fontWeight:"bold"}}>{tempholdingarr["Risk_Model.alternateRiskScore"]}</span>):(null)}
+          {tempholdingarr["Risk_Model.alternateRiskScore"]<500 ? (<span style={{fontWeight:"bold"}}>{tempholdingarr["Risk_Model.alternateRiskScore"]}</span>):(<span> </span>)}
           {/* <p style={{ position:'absolute', top:"12px", left:"90px"}}>TEST</p> */}
           {/* <span style={{fontWeight:"bold"}}>{businessarr[0].riskamount.find(item => item.GroupName === "Medium risk")?.Count || 0}</span> */}
-          {(tempholdingarr["Risk_Model.alternateRiskScore"]>333 && tempholdingarr["Risk_Model.alternateRiskScore"]<666) ? (<span style={{fontWeight:"bold"}}>{tempholdingarr["Risk_Model.alternateRiskScore"]}</span>):(null)}
+          {(tempholdingarr["Risk_Model.alternateRiskScore"]>=500 && tempholdingarr["Risk_Model.alternateRiskScore"]<650) ? (<span style={{fontWeight:"bold"}}>{tempholdingarr["Risk_Model.alternateRiskScore"]}</span>):<span> </span>}
 
           {/* <p style={{ position:'absolute', top:"12px", left:"310px"}}>TEST</p> */}
           {/* <span style={{fontWeight:"bold"}}>{businessarr[0].riskamount.find(item => item.GroupName === "High Risk")?.Count || 0}</span> */}
-          {(tempholdingarr["Risk_Model.alternateRiskScore"]>=666) ? (<span style={{fontWeight:"bold"}}>{tempholdingarr["Risk_Model.alternateRiskScore"]}</span>):(null)}
+          {(tempholdingarr["Risk_Model.alternateRiskScore"]>=650) ? (<span style={{fontWeight:"bold"}}>{tempholdingarr["Risk_Model.alternateRiskScore"]}</span>):<span> </span>}
 
           {/* <p style={{ position:'absolute', top:"12px", right:"90px"}}>TEST</p> */}
 
