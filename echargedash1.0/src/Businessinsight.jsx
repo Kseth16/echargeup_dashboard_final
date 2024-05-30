@@ -1135,11 +1135,17 @@ data={(businessarr!==null)?(businessarr[0]["totalsocialsites"]):(null)}
 <div style={{width:'50%', position:"relative", top:"5px"}}>
 {(businessarr !== null && businessarr[0]?.networksusedresult !== null) ? (
           <p className="text-tremor-default text-tremor-content dark:text-dark-tremor-content flex items-center justify-around">
-          <span style={{fontWeight:"bold"}}>{businessarr[0].riskamount.find(item => item.GroupName === "Low risk")?.Count || 0}</span>
+          {/* <span style={{fontWeight:"bold"}}>{businessarr[0].riskamount.find(item => item.GroupName === "Low risk")?.Count || 0}</span> */}
+          {/* <span style={{fontWeight:"bold"}}>{tempholdingarr["Risk_Model.alternateRiskScore"]<333?({tempholdingarr["Risk_Model.alternateRiskScore"]}):(null)} </span> */}
+          {tempholdingarr["Risk_Model.alternateRiskScore"]<333 ? (<span style={{fontWeight:"bold"}}>{tempholdingarr["Risk_Model.alternateRiskScore"]}</span>):(null)}
           {/* <p style={{ position:'absolute', top:"12px", left:"90px"}}>TEST</p> */}
-          <span style={{fontWeight:"bold"}}>{businessarr[0].riskamount.find(item => item.GroupName === "Medium risk")?.Count || 0}</span>
+          {/* <span style={{fontWeight:"bold"}}>{businessarr[0].riskamount.find(item => item.GroupName === "Medium risk")?.Count || 0}</span> */}
+          {(tempholdingarr["Risk_Model.alternateRiskScore"]>333 && tempholdingarr["Risk_Model.alternateRiskScore"]<666) ? (<span style={{fontWeight:"bold"}}>{tempholdingarr["Risk_Model.alternateRiskScore"]}</span>):(null)}
+
           {/* <p style={{ position:'absolute', top:"12px", left:"310px"}}>TEST</p> */}
-          <span style={{fontWeight:"bold"}}>{businessarr[0].riskamount.find(item => item.GroupName === "High Risk")?.Count || 0}</span>
+          {/* <span style={{fontWeight:"bold"}}>{businessarr[0].riskamount.find(item => item.GroupName === "High Risk")?.Count || 0}</span> */}
+          {(tempholdingarr["Risk_Model.alternateRiskScore"]>=666) ? (<span style={{fontWeight:"bold"}}>{tempholdingarr["Risk_Model.alternateRiskScore"]}</span>):(null)}
+
           {/* <p style={{ position:'absolute', top:"12px", right:"90px"}}>TEST</p> */}
 
         </p>
@@ -1231,7 +1237,7 @@ data={(businessarr!==null)?(businessarr[0]["totalsocialsites"]):(null)}
 
 </Card>
 
-<Card style={{height:'33%'}}>
+<Card style={{height:'66%'}}>
 
 
 
@@ -1310,37 +1316,12 @@ data={(businessarr!==null)?(businessarr[0]["totalsocialsites"]):(null)}
 </Card>
 
 
-<Card style={{height:'33%'}}>
-<>
-<p className="absolute top-0 left-1/2 transform -translate-x-1/2 text-center text-tremor-default text-tremor-content dark:text-dark-tremor-content whitespace-nowrap">
-          <span className="font-bold">Top 4 Social Sites</span>
-        </p>
-
-
-<>
-{(businessarr !== null && businessarr[0]?.networksusedresult !== null) ? (
-
-
-<>
-
-<div >
-<BarList
-data={(businessarr!==null)?(businessarr[0]["totalsocialsites"]):(null)}
-/>
-</div>
-
-
-
-      </>
-      ):(<p className="font-bold text-center">LOADING...</p>)}
-</>
-</>
 
 
 
 
 
-</Card>
+
 </div>
 
 
@@ -1366,7 +1347,11 @@ data={(businessarr!==null)?(businessarr[0]["totalsocialsites"]):(null)}
 
 
   <>
-    <div className="flex flex-row justify-start">
+   <div style={{position:"absolute",left:"100px"}} className="flex flex-row justify-between">
+ 
+
+ <div className="flex flex-row justify-start">
+
 
  
 
@@ -1380,7 +1365,7 @@ data={(businessarr!==null)?(businessarr[0]["totalsocialsites"]):(null)}
 
 
 </div>
-
+</div>
 
 
 
@@ -1565,7 +1550,7 @@ data={(businessarr!==null)?(businessarr[0]["totalsocialsites"]):(null)}
 
  
 
-<div className="flex flex-row justify-between">
+<div className="flex flex-row justify-start">
 
  
 
