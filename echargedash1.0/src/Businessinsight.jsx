@@ -1698,7 +1698,7 @@ data={(businessarr!==null)?(businessarr[0]["totalsocialsites"]):(null)}
  
  <div className="flex flex-row justify-between">
 
-<h1 style={{fontSize:"24px"}}>{tempholdingarr["Phone_to_Name.vpa"]}</h1>
+<h1 style={{fontSize:"24px", paddingTop:'10px'}}>{tempholdingarr["Phone_to_Name.vpa"]}</h1>
 
 
 
